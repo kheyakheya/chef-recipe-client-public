@@ -8,8 +8,16 @@ import { AuthContext } from '../Provider/AuthProvider';
   
 
 const Navbar = () => {
-    const {user}=useContext(AuthContext)
-    const [menuOpen, setMenuOpen] = useState(false)
+    const {user, logOut}=useContext(AuthContext);
+    const [menuOpen, setMenuOpen] = useState(false);
+    const handleLogout=()=>{
+      logOut()
+      .then(() => {
+          // Sign-out successful.
+        }).catch((error) => {
+          // An error happened.
+        });
+  }
   return (
     <div className='bg-orange-400 px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8'>
       <div className='relative flex items-center justify-between'>
@@ -46,6 +54,19 @@ const Navbar = () => {
              Blog
             </NavLink>
           </li>
+          {user ? 
+          <>
+            <img className='h-12 w-12 rounded-full' src={user.photoURL || 'https://t4.ftcdn.net/jpg/00/65/77/27/240_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg'} alt="" title={user.displayName} />
+            <li><button onClick={handleLogout} className='btn bg-orange-400 border-none'>Logout</button></li>
+          </>:
+          <><li>
+          <NavLink
+            to='/login'
+            className={({ isActive }) => (isActive ? 'text-blue-800 italic' : '')}
+          >
+           Login
+          </NavLink>
+        </li></> }
           
         </ul>
         {/* Mobile Navbar Section */}

@@ -107,7 +107,7 @@ const Registration = () => {
 
                     <p className= 'text-green-700 px-8 py-4 text-xl'><small >{success}</small></p>
                     <p className='text-red-400 px-8 py-4 text-xl'><small>{error}</small></p>
-                    <Link className='px-8 pb-8' to="/login" ><span>Already Have an Account?</span><button className=" px-2 pb-8 btn btn-link">Register</button></Link>
+                    <Link className='px-8 pb-8' to="/login" ><span>Already Have an Account?</span><button className=" px-2 pb-8 btn btn-link">Login</button></Link>
 
 
                 </div>
