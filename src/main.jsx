@@ -14,12 +14,13 @@ import ChefDetail from './Pages/ChefDetail.jsx';
 import Blog from './Pages/Blog.jsx';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import AuthProvider from './Provider/AuthProvider.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
-   
+
     children: [
       {
         path: "/",
@@ -35,14 +36,14 @@ const router = createBrowserRouter([
 
       },
       {
-        path:":id",
-        element:<ChefDetail></ChefDetail>,
-        loader:({params})=>fetch(`http://localhost:5000/chefs/${params.id}`)
+        path: ":id",
+        element: <ChefDetail></ChefDetail>,
+        loader: ({ params }) => fetch(`http://localhost:5000/chefs/${params.id}`)
 
       },
       {
-        path:'/blog',
-        element:<Blog></Blog>
+        path: '/blog',
+        element: <Blog></Blog>
       }
     ],
   },
@@ -50,7 +51,9 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
-    <ToastContainer />
+    <AuthProvider>
+      <RouterProvider router={router} />
+      <ToastContainer />
+    </AuthProvider>
   </React.StrictMode>,
 )

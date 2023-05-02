@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import {
     Bars3BottomRightIcon,
     XMarkIcon,
   } from '@heroicons/react/24/solid'
+import { AuthContext } from '../Provider/AuthProvider';
   
 
 const Navbar = () => {
+    const {user}=useContext(AuthContext)
     const [menuOpen, setMenuOpen] = useState(false)
   return (
     <div className='bg-orange-400 px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8'>
