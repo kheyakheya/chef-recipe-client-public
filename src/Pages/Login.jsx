@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Provider/AuthProvider';
+import { FaGithub, FaGoogle } from "react-icons/fa";
 
 const Login = () => {
 
@@ -64,10 +65,10 @@ const Login = () => {
         })
     }
     return (
-        <div className="hero min-h-screen bg-base-200">
+        <div className="hero min-h-screen bg-base-200 pt-6">
             <div className="hero-content flex-col ">
                 <div className="text-center pb-4">
-                    <h1 className="text-5xl font-bold">Please Login</h1>
+                    <h1 className="text-5xl font-bold text-orange-400">Please Login</h1>
                 </div>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <form onSubmit={handleLogin} className="card-body pb-2">
@@ -95,10 +96,10 @@ const Login = () => {
                     
                     <Link className='px-8' to="/register" ><span>New to Chefzzzz Tray?</span><button className=" px-2 btn btn-link">Register</button></Link>
                     <div className='card-body'>
-                    <button onClick={handleGoogleLogin} className="btn border-none bg-orange-400">Google Login</button>
+                    <button onClick={handleGoogleLogin} className="btn border-none bg-orange-400"><FaGoogle className='text-white me-4 text-2xl'></FaGoogle>Google Login</button>
                     </div>
                     <div className='card-body'>
-                    <button onClick={handleGithubLogin} className=" btn border-none bg-orange-400">GitHUb Login</button>
+                    <button onClick={handleGithubLogin} className=" btn border-none bg-orange-400"><FaGithub className='text-white me-4 text-2xl'></FaGithub>GitHUb Login</button>
 
                     </div>
 

@@ -125,6 +125,19 @@ const Navbar = () => {
                         Blog
                       </Link>
                     </li>
+                    {user ? 
+          <>
+            <img className='h-12 w-12 rounded-full' src={user.photoURL || 'https://t4.ftcdn.net/jpg/00/65/77/27/240_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg'} alt="" title={user.displayName} />
+            <li><button onClick={handleLogout} className='btn bg-orange-400 border-none'>Logout</button></li>
+          </>:
+          <><li>
+          <NavLink
+            to='/login'
+            className={({ isActive }) => (isActive ? 'text-blue-800 italic' : '')}
+          >
+           Login
+          </NavLink>
+        </li></> }
                   </ul>
                 </nav>
               </div>

@@ -11,7 +11,7 @@ const Home = () => {
     },[])
     
     return (
-        <div>
+        <div className='mb-32'>
             <HomeBanner></HomeBanner>
             <div className='my-4 grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
             {chefs?.map(chef=><ChefCard key={chef.id} chef={chef}></ChefCard>)}
