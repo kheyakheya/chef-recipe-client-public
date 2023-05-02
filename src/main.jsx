@@ -15,11 +15,14 @@ import Blog from './Pages/Blog.jsx';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AuthProvider from './Provider/AuthProvider.jsx';
+import PrivateRout from './Routes/PrivateRout.jsx';
+import ErrorPage from './Pages/ErrorPage.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
+    errorElement:<ErrorPage></ErrorPage>,
 
     children: [
       {
@@ -37,7 +40,7 @@ const router = createBrowserRouter([
       },
       {
         path: ":id",
-        element: <ChefDetail></ChefDetail>,
+        element: <PrivateRout><ChefDetail></ChefDetail></PrivateRout>,
         loader: ({ params }) => fetch(`http://localhost:5000/chefs/${params.id}`)
 
       },

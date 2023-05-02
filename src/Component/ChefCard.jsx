@@ -14,7 +14,7 @@ const ChefCard = ({ chef }) => {
                     <p>Likes: {likes}</p>
                     <div className="card-actions justify-start my-2">
                         <Link to={`/${id}`}>
-                        <button className="btn border-none bg-orange-400">Buy Now</button>
+                        <button className="btn border-none bg-orange-400">View Recipes</button>
                         </Link>
                     </div>
                 </div>
