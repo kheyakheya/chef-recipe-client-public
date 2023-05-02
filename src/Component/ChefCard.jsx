@@ -11,7 +11,7 @@ const ChefCard = ({ chef }) => {
                     <h2 className="card-title text-orange-400">{chefName}</h2>
                     <p>Experience: {yearsOfExperience} years</p>
                     <p>Number of Recipes: {numberOfRecipes} </p>
-                    <p>Likes: {likes} years</p>
+                    <p>Likes: {likes}</p>
                     <div className="card-actions justify-start my-2">
                         <Link to={`/${id}`}>
                         <button className="btn border-none bg-orange-400">Buy Now</button>
