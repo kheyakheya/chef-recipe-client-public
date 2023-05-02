@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Rating } from '@smastrom/react-rating'
 
 import '@smastrom/react-rating/style.css'
+import { ToastContainer, toast } from 'react-toastify';
 
 const RecipeCard = ({rec}) => {
+    const [favourite,setFavourite]=useState(false);
     const {name,ingredients,cookingMethod, rating}=rec;
+    const handleFavourite=()=>{
+        setFavourite(true);
+        toast("Added to Favourite");
+
+    }
     return (
         <div>
             <div className="card h-full w-96 bg-base-100 shadow-xl shadow-orange-400 ">
@@ -17,7 +24,7 @@ const RecipeCard = ({rec}) => {
                     <span className='text-xl ms-2'>{rating}</span>
                     </div>
                     <div className="card-actions justify-end">
-                    <button className="btn border-none bg-orange-400">Favourite</button>
+                    <button onClick={handleFavourite} disabled={favourite} className="btn border-none bg-orange-400">Favourite</button>
                     </div>
                 </div>
             </div>
