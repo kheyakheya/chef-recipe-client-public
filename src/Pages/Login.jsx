@@ -5,7 +5,7 @@ import { FaGithub, FaGoogle } from "react-icons/fa";
 
 const Login = () => {
 
-    const {logIn, googleLogin, githubLogin}=useContext(AuthContext)
+    const {logIn, googleLogin, githubLogin,passwordReset}=useContext(AuthContext)
     const [show,setShow]=useState(false);
     const [error,setError]=useState('');
     const [success, setSuccess]=useState('');
@@ -64,6 +64,7 @@ const Login = () => {
             setError(error.message)
         })
     }
+    
     return (
         <div className="hero min-h-screen bg-base-200 pt-6">
             <div className="hero-content flex-col ">
@@ -84,7 +85,6 @@ const Login = () => {
                             </label>
                             <input type={show ? "text" : "password" } name='password' placeholder="password" className="input input-bordered" required />
                             {show ? <p onClick={()=>{setShow(!show)}}><small>Hide Password</small></p> : <p onClick={()=>{setShow(!show)}}><small>Show Password</small></p> }
-                            
                            
                         </div>
                         <div className="form-control mt-6">
