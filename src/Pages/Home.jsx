@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import HomeBanner from '../Component/HomeBanner';
 import ChefCard from '../Component/chefCard';
+import AboutUs from '../Component/AboutUs';
+import JoinUs from '../Component/JoinUs';
 
 const Home = () => {
     const [chefs,setChefs]=useState([]);
@@ -17,6 +19,8 @@ const Home = () => {
             {chefs?.map(chef=><ChefCard key={chef.id} chef={chef}></ChefCard>)}
 
             </div>
+            <AboutUs></AboutUs>
+            <JoinUs></JoinUs>
 
         </div>
     );
