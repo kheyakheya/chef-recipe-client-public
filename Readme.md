@@ -1,8 +1,8 @@
 * live link client : https://assignment-ten-prac.web.app
 * live link server : https://assignment-ten-practice-server.vercel.app/chefs
-* github repo client: https://github.com/programming-hero-web-course-4/b7a10-chef-recipe-hunter-client-side-kheyakheya
-github repo server: https://github.com/programming-hero-web-course-4/b7a10-chef-recipe-hunter-server-side-kheyakheya
-* github repo server: 
+* github repo server: https://github.com/programming-hero-web-course-4/b7a10-chef-recipe-hunter-server-side-kheyakheya
+
+*  PROJECT STEPS: 
 * created json file with fake chef data
 * made home page banner
 * data loaded in home page and created card in another component using map
@@ -11,4 +11,4 @@ github repo server: https://github.com/programming-hero-web-course-4/b7a10-chef-
 * 404 page and loading spinner added
 * navbar conditional profile picture ,name and logout button added
 * Added lazy loader in chef recipe image and pdf converter in blog 
-* Mad home page responsive
+* Made home page responsive 
