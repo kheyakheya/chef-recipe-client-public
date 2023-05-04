@@ -1,3 +1,8 @@
+* live link client : https://assignment-ten-prac.web.app
+* live link server : https://assignment-ten-practice-server.vercel.app/chefs
+* github repo client: https://github.com/programming-hero-web-course-4/b7a10-chef-recipe-hunter-client-side-kheyakheya
+github repo server: https://github.com/programming-hero-web-course-4/b7a10-chef-recipe-hunter-server-side-kheyakheya
+* github repo server: 
 * created json file with fake chef data
 * made home page banner
 * data loaded in home page and created card in another component using map

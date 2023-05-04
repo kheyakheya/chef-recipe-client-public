@@ -7,7 +7,7 @@ import JoinUs from '../Component/JoinUs';
 const Home = () => {
     const [chefs,setChefs]=useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/chefs')
+        fetch('https://assignment-ten-practice-server.vercel.app/chefs')
         .then(res=>res.json())
         .then(data=> setChefs(data))
     },[])
